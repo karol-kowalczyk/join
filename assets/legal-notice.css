@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.impressum{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 50%;
+
+    height: 50%;
+}
+
+@media (max-width: 1024px){
+    .impressum{
+        width: 80%;
+    }
+}
+
+
+/*======Shows active site=====  */
+#temp-legal.notice{
+    background-color: var(--background-dark-active);
+}
+
+
+/* ========================================= */
+

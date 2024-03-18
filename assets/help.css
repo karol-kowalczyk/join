@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    position: relative;
+    left: 116px;
+    top: 99px;
+    font-family: Inter;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    gap: 30px;
+    padding-top: 32px;
+    padding-bottom: 64px;
+}
+
+h1 {
+    font-size: 61px;
+    margin-bottom: 14px;
+}
+
+.captions {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+li {
+    padding-left: 35px;
+    margin-bottom: 16px;
+}
+
+li::marker {
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.join {
+    color: var(--lightblue);
+}
+
+.enjoy {
+    font-size: 27px;
+    font-weight: 700;
+}
+
+
+/* responsive */
+
+@media(max-width: 1024px) {
+    main {
+        left: 0;
+        width: 90%;
+        padding-bottom: 160px;
+    }
+}

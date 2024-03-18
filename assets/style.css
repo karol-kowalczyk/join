@@ -1,0 +1,359 @@
+:root {
+    /* Hauptfarben */
+    --background-white: #F6F7F8;
+    --background-dark: #2A3647;
+    --background-dark-active: #091931;
+    --font-color-not-active: #CDCDCD;
+    --background-dark-hover: #2A3D59;
+    --background-grey-hover: #D1D1D1;
+    /* choose color for dropdown */
+    --lightblue: #8AA4FF;
+    --red: #FF0000;
+    --green: #2AD300;
+    --orange: #FF8A00;
+    --purple: #E200BE;
+    --darkblue: #0038FF;
+    /* font colors */
+    --white: rgba(251, 251, 251);
+    --black: rgba(0, 0, 0);
+    --icon: rgb(168, 168, 168);
+    /* background colors */
+    --darkblue: #2a3647;
+    --lightgrey: rgb(246, 247, 248);
+    --ligthblue: rgb(41, 171, 226);
+    /* button colors */
+    --darkblueblue: rgb(9, 25, 49);
+    /* Prio-colors */
+    --prio-red: #FF3D00;
+    --prio-orange: #FFA800;
+    --prio-green: #7AE229;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Inter';
+}
+
+
+/* helpers------------------- */
+
+.display-none {
+    display: none !important;
+}
+
+
+/* typography---------------- */
+
+.typo2Body {
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.2px;
+}
+
+.typo2BodyV2 {
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.typoBtnLogin {
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    /* line-height: 19.2px; */
+}
+
+.typo2t6 {
+    font-family: 'Inter';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.typo2t1 {
+    font-family: 'Inter';
+    font-size: 61px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 73.2px;
+}
+
+.txtBlack {
+    color: var(--black)
+}
+
+.txtWhite {
+    color: var(--white);
+}
+
+.txtGrey {
+    color: var(--icon);
+}
+
+
+/*============== Main-Desktop-Template =================*/
+
+
+/*=== Header === */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 89px;
+    padding: 20px, 36px, 20px, 348px;
+    background: white;
+    box-shadow: 0px 4px 4px 0px #0000001A;
+    z-index: 111;
+}
+
+.logo-img-mobile {
+    display: none;
+}
+
+#temp-header-container {
+    background-color: white;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header>div>span {
+    margin-left: 240px;
+    font-size: 20px;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.temp-logout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 26px;
+    cursor: pointer;
+}
+
+.temp-vector-img {
+    height: 31px;
+    width: 31px;
+}
+
+.temp-logout-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 49px;
+    width: 49px;
+    margin-right: 20px;
+    border: 3px solid var(--background-dark);
+    border-radius: 100%;
+    color: var(--lightblue);
+}
+
+#logout {
+    width: 91px;
+    height: 41px;
+    font-size: 16px;
+    position: absolute;
+    right: 100px;
+    top: 100px;
+    background-color: var(--background-dark);
+    color: var(--background-white);
+    border: none;
+    padding: 4px 16px;
+    border-radius: 14px 0px 14px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.hidden-logout-btn {
+    top: 20px;
+    opacity: 0;
+    z-index: 999;
+}
+
+
+/* === NAV === */
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 232px;
+    height: 100vh;
+    /* padding: 66px 20px 66px 20px; */
+    gap: 103px;
+    background-color: var(--background-dark);
+    box-shadow: 0px 0px 4px 0px #0000001A;
+    z-index: 112;
+}
+
+nav>img {
+    margin-top: 66px;
+    width: 100px;
+    height: 121px;
+}
+
+#temp-reiter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.temp-reiter-links {
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: var(--font-color-not-active);
+    display: flex;
+    gap: 10px;
+}
+
+.temp-reiter {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.temp-reiter:hover {
+    background-color: var(--background-dark-hover);
+}
+
+.temp-reiter:hover .temp-icon-hover-img {
+    display: unset;
+}
+
+.temp-reiter:hover .temp-reiter-links {
+    color: white;
+}
+
+.temp-icon-imgs {
+    width: 30px;
+    height: 30px;
+}
+
+.temp-icon-hover-img {
+    display: none;
+    z-index: 2;
+    position: absolute;
+}
+
+#impressum-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+#legal-notice-img {
+    width: 25px;
+    height: 25px;
+}
+
+.content {
+    position: absolute;
+    top: 89px;
+    left: 232px;
+    display: flex;
+    z-index: 2;
+}
+
+.nav-mobile-container {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    nav {
+        display: none;
+    }
+    header>div>span {
+        display: none;
+    }
+    .logo-img-mobile {
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin-right: 120px;
+    }
+    .logo-img-mobile img {
+        width: 100%;
+        height: 100%;
+        margin-left: 20px;
+    }
+    #temp-header-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        z-index: 2;
+    }
+    .nav-mobile-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 89px;
+        padding: 20px, 36px, 20px, 348px;
+        background: var(--background-dark);
+        box-shadow: 0px 4px 4px 0px #0000001A;
+        z-index: 112;
+    }
+    .nav-mobile-reiter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        color: var(--font-color-not-active);
+    }
+    .active {
+        height: 80px;
+        width: 80px;
+        border-radius: 10px;
+        background-color: var(--background-dark-active);
+    }
+}
+
+@media (max-width: 700px) {
+    .nav-mobile-reiter {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+    }
+    .nav-mobile-reiter>p {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/gif" href="./assets/img/join-icon weiss.png">
+    <link rel="stylesheet" href="./assets/fonts.css">
+    <link rel="stylesheet" href="./assets/contacts.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="js/template_script2.js"></script>
+    <script src="js/db_connect.js"></script>
+    <script src="js/sign_up.js"></script>
+    <script src="js/summary.js"></script>
+    <script src="js/login.js"></script>
+   
+    <script src="./js/edit_contact.js"></script>
+    <script src="./js/add_contact.js"></script>
+    <script src="./js/logout.js"></script>
+    <script src="./js/board.js"></script>
+    <title>Contacts</title>
+</head>
+
+<body onload="init(); getContacts();">
+    <div id="add-contakt-modal">
+        <div class="add-contacts-container">
+            
+            <div class="add-contact-greeting-container">
+                <img src="./assets/img/join-icon weiss.png">
+                <h1><span id="header-add-edit">Add</span> contact</h1>
+                <p id="header-text">Tasks are better with a team!</p>
+                <hr class="add-contact-hr">
+            </div>
+            <div class="add-contact-form-container">
+                <div id="contact-icon" class="contact-member-icon">
+                    <img src="./assets/img/member-icon.png">
+                </div>
+                <div class="add-contact-form">
+                    <div class="input-container">
+                     <input id="contactName" type="text" name="contact_name" placeholder="Name" required>
+                     <span id="contactNameError" class="error-message"></span>
+                     <img class="add-contact-img" src="./assets/img/member-icon-klein.png" alt="">
+                    </div>
+                    <div class="input-container">
+                     <input id="contactEmail" type="email" name="contact_email" placeholder="Email" required>
+                     <span id="contactEmailError" class="error-message"></span>
+                        <img class="add-contact-img" src="./assets/img/email-logo.png" alt="">
+                    </div>
+                    <div class="input-container">
+                     <input id="contactPhone" type="text" name="contact_phone" placeholder="Phone" required>
+                        <span id="contactPhoneError" class="error-message"></span>
+                        <img class="add-contact-img" src="./assets/img/phone-icon.png" alt="">
+                    </div>
+                     <div id="btn-add" class="btn">
+                        <button onclick="closeModal()" class="add-contact" >
+                            Cancel
+                            <img src="./assets/img/close-icon.png" alt="">
+                        </button>
+                        <button onclick="createContact()" class="create-contact" >
+                            Create contact
+                            <img src="./assets/img/chack-icon.png" alt="">
+                        </button>
+                     </div>
+                     <div id="btn-edit" class="btn displaynone">
+                            <div class="btn">
+                                <button onclick="deleteContact(contact)" class="add-contact" >
+                                    Delete  
+                                </button>
+                                <button onclick="saveContact(contact)" class="create-contact" >
+                                    Save
+                                </button>
+                            </div>
+                     </div> 
+                </div>
+            </div>
+            <button onclick="closeModal()"  class="close">
+                <img  class="close-icon" src="./assets/img/close-icon.png" alt="close-icon">
+            </button>
+        </div>
+    </div>
+<div w3-include-html="assets/templates/desktop_template.html"></div>
+<div class="content" id="contakt-mobiel">
+    <button onclick="openModalAddContakt()" class="contact-btn">
+        <span class="btn-deskription">New contact</span>
+        <img src="./assets/img/memberaddweiss.png">
+    </button>
+    <div class="contacts-content">
+
+    <div id="contacts-list">
+        
+    </div>
+    
+    <div id="contact-m" class="contact">
+        <div id="back-to-contancts" class="back">
+            <img src="./assets/img/back-icon.png" alt="">
+        </div>
+        <div class="contact-header-title">
+            <div class="contact-header-title-icon">Contacts</div>
+            <hr class="contact-header-hr">
+            <div class="contact-header-title-name">Better with a team</div>
+        </div>
+        <div id="contact-content">
+       
+    </div>
+</div>
+</div>
+<script src="./js/variabels.js"></script>
+</body>
+</html>

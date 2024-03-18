@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/gif" href="./assets/img/join-icon weiss.png">
+    <link rel="stylesheet" href="./assets/fonts.css">
+    <link rel="stylesheet" href="./assets/login.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="./js/db_connect.js"></script>
+    <script src="./js/sign_up.js"></script>
+    <script src="./js/logout.js"></script>
+    <script src="./js/login.js"></script>
+    <title>Join</title>
+</head>
+
+<body onload="moveLogo()">
+    <div class="content-login">
+        <div id="img-container" class="img-container">
+            <img id="logo-image" class="logo-image" src="./assets/img/join-logo-gross-dunkel.svg">
+        </div>
+        <div id="img-container-mobile" class="img-container-mobile">
+            <img id="logo-image-mobile" class="logo-image" src="./assets/img/capa2.svg">
+        </div>
+
+
+        <div id="login-header" class="login-header">
+            <div class="login-header-signup">
+                <p class="typo2t6">Not a Join user?</p>
+                <button onclick="window.location.href = 'signup.html'" class="btn-login-singup typoBtnLogin">Sign up</button>
+            </div>
+        </div>
+
+        <div id="login-form" class="login-form">
+            <div class="input-headline">
+                <h1 class="typo2t1 txtBlack">Log In</h1>
+                <hr class="form-hr">
+            </div>
+            <div class="login-remember-content">
+                <div class="input-container">
+                    <input class="typo2t6" id="loginEmail" type="email" placeholder="Email" required>
+                    <div id="emailError" class="input-error"></div>
+                    <img class="login-img" src="./assets/img/email-logo.png" alt="email-logo">
+                </div>
+                <div class="input-container">
+                    <input class="typo2t6" id="loginPassword" type="password" placeholder="Password" required>
+                    <div id="passwordError" class="input-error"></div>
+                    <img class="login-img" src="./assets/img/schloss-logo.png" alt="password-logo">
+                </div>
+                <div class="login-remember">
+                    <div class="login-chackbox">
+                        <input class="login-chakbox-insert" type="checkbox" id="remember">
+                        <label class="typo2BodyV2" for="remember">Remember me</label>
+                    </div>
+                    <a class="login-link typo2BodyV2" onclick="window.location.href='forgotpassword.html'">Forgot my
+                        password</a>
+                </div>
+            </div>
+            <div class="login-submit">
+                <button onclick="login()" class="btn-login typoBtnLogin">Log In</button>
+                <button onclick="guestLogin()" class="login-guest typoBtnLogin">Guest Log In</button>
+            </div>
+        </div>
+        <div id="indexFooter" class="indexFooter">
+            <a href="legal_notice.html"><span class="typo2Body txtGrey">Privacy Policy</span></a>
+            <a href="legal_notice.html"><span class="typo2Body txtGrey">Legal notice</span></a>
+        </div>
+    </div>
+    <div id="loginOverlay" class="loginOverlay">
+    </div>
+
+    <script src="./js/variabels.js"></script>
+</body>
+
+</html>
