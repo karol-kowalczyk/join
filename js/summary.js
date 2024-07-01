@@ -27,7 +27,6 @@ async function getUserName(){
     }
 }
 
-
 /**
  * Filters tasks based on a provided property and value, and then updates the text content of a specified HTML element.
  *
